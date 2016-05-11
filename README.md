@@ -1,0 +1,2 @@
+# LogicLabirynth
+Logic game
