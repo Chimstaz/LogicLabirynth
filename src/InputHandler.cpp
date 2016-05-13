@@ -11,7 +11,7 @@ InputHandler::InputHandler()
     ,_rightKey(KEY_RIGHT)
     ,_exitKey(KEY_F(12))
     ,_toggleMoveTypeKey(9) //tab_key
-    ,_generalHelp(KEY_F(1))
+    ,_generalHelp(KEY_F(4))
     ,_moveHelp(KEY_F(2))
     ,_andHelp(KEY_F(6))
     ,_orHelp(KEY_F(7))

@@ -5,7 +5,7 @@ CXXFLAGS=-O3 -std=c++11 -I$(IDIR)
 ODIR=obj
 CDIR=src
 
-LIBS=-lncurses
+LIBS=./lib/libncurses.so.5 ./lib/libtinfo.so.5
 
 _DEPS = ColorsDef.h Game.h GameField.h GameFieldStrings.h GlobalDefines.h InputHandler.h LogicBox.hpp LogVal.h Map.h MessageWindow.h Sleep.h Tile.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
@@ -19,7 +19,7 @@ $(ODIR)/%.o: $(CDIR)/%.cpp $(DEPS)
 	$(CXX) -c -o $@ $< $(CXXFLAGS)
 
 logic: $(OBJ)
-	$(CXX) -o $@ $^ $(CXXFLAGS) $(LIBS)
+	$(CXX) -o $@ $^ $(CXXFLAGS) -Wl,-rpath,./lib $(LIBS)
 
 .PHONY: clean
 

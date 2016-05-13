@@ -44,7 +44,7 @@ Each changed tile will recursivlly calculate its value and change x and y argume
 
 #define NOPASSABLES "List of no passable logic values:\n"
 
-#define HEADER_STRING "Press F1 for help."
+#define HEADER_STRING "Press F4 for help."
 
 #define MAP_HELP "Map is parted into tiles. Each tile has four field and look like this:\n\
 xy\n\
